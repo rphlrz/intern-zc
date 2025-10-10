@@ -1,0 +1,86 @@
+## IDEs
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.DotSettings.user
+_ReSharper*/
+*_ReSharper.*
+*_Resharper.*
+
+## Build/Output
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+artifacts/
+out/
+publish/
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+*.svclog
+*.cache
+
+## ASP.NET/Blazor
+wwwroot/dist/
+wwwroot/.cache/
+wwwroot/*.gz
+wwwroot/*.br
+
+## Configurações e segredos (mantenha appsettings.json)
+appsettings.*.local.json
+secrets.json
+local.settings.json
+*.pubxml
+*.publishsettings
+PublishProfiles/
+ServiceDependencies/
+ServiceReferences/
+
+## Pacotes/NuGet
+packages/
+*.nupkg
+*.snupkg
+# (opcional) manter arquivos necessários de build
+!packages/build/
+!packages/repositories.config
+
+## SQL Server (manter somente scripts .sql)
+*.mdf
+*.ldf
+*.ndf
+*.bak
+*.trn
+*.dacpac
+*.bacpac
+
+## Node (se usar tooling front-end)
+node_modules/
+npm-debug.log*
+pnpm-debug.log*
+.yarn/*
+.pnp.*
+.parcel-cache/
+.dist/
+.turbo/
+.next/
+
+## SO/Editor
+.DS_Store
+Thumbs.db
+*.code-workspace
+
+## Certificados/Chaves
+*.pfx
+*.p12
+*.cer
+*.key
+
+## Relatórios Crystal (manter .rpt)
+!**/*.rpt
+*.rpt.config
