@@ -1,0 +1,9 @@
+### **Feature Report – October 24, 2025**
+
+During today’s maintenance, I focused on resolving synchronization issues related to the equipment registration date that were preventing certain devices from updating correctly. After retesting, I identified that the synchronization function was not updating specific records as expected. To address this, I reinserted the `GetEquipment` method call within the `UpdateSynchronization` routine, which allowed the system to correctly retrieve and update each equipment record. This adjustment restored the synchronization flow.
+
+Later in the morning, I participated in a meeting with the team to review the code and evaluate recent adjustments. We analyzed configuration settings and confirmed that the registration date field should remain ignored during synchronization, as removing the ignore rule caused inconsistencies in the registration data. However, I removed a duplicated ignore directive related to the equipment entity and cleaned up unnecessary null validations in the mapper for equipment records that are manually registered through the interface.
+
+I also reviewed the codebase to ensure that redundant calls to `GetRegistrationDate` were removed. Since the registration date property was already being handled by a shared variable within the properties configuration, those explicit calls in the Services, Repositories, and Interfaces were no longer required. This cleanup simplified the logic and reduced code duplication.
+
+By the end of the day, I verified that the synchronization worked as intended, the mappings were consistent, and redundant components were removed, leaving the codebase more coherent and maintainable.
