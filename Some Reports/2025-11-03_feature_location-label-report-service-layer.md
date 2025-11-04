@@ -1,0 +1,5 @@
+### Feature Report – November 03, 2025
+
+Today, I implemented the full backend stack for the new Location Label Report. In the data layer (LocationRepository), I created the core query method getQueryFilterForEtiqueta. This IQueryable method filters locations based on the new LocationReportFilter (Company, Unit, Location Code, etc.). I also added a key security filter to this query, ...Users.Any(y => y.UserId == currentUserId), ensuring that users can only retrieve data for organizational units they are assigned to.
+
+On top of this, I built two public methods: FilterWithPagingForEtiqueta (for the paginated grid) and FilterIdsForEtiqueta (for the "Select All" feature). In the service layer (LocationService), I implemented methods to retrieve the authenticated user's ID from the session and pass it to the repository. Finally, in the LocationAppService, I called the service and used AutoMapper (base.Map<>) to transform the Location entities into LocationLabelReportDTOs for the controller. I also finished the setup by registering the new report in the PermissionEnum and adding it to the _Navigation.cshtml side menu, making it visible based on user permissions.
