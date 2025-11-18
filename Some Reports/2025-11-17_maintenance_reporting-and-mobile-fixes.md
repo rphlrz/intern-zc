@@ -1,0 +1,3 @@
+## Hierarchical Dropdown Improvements and Two-Line Item Formatting
+
+I refined the dropdown used for filtering reports to show hierarchical information (parent unit) and integrated a third-party select widget to support two-line items. I created an app service method to return only the required fields projected into a DTO for the dropdown and added a client-side initialization script to consume the JSON endpoint and format each item in two lines. I applied CSS overrides so the widget visually matches native Bootstrap form controls and used raw HTML rendering where necessary to preserve special characters in placeholders.

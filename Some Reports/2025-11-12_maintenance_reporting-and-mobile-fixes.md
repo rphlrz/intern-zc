@@ -1,0 +1,5 @@
+## Responsive Layout Corrections for Label Report View and Bootstrap Grid Adjustments
+
+I adjusted the view that triggers the label report, focusing on responsive layout and filter behaviour. The requirement was that the "Active Location?" filter align horizontally with other fields on wide screens and move below the "Location Code" field on narrow screens, matching a reference view. My first attempt grouped both fields in the same grid column but that did not replicate the reference's responsive behavior. After inspecting the HTML and Bootstrap classes, I standardized the grid classes for the "Active Location?" control to match the reference (col-lg-3, col-md-4) and isolated the action button into a separate row so it would not affect the grid’s line break calculations.
+
+A remaining issue was that a long label caused two-line wrapping and produced height differences that disrupted floats in Bootstrap 3. I resolved it by changing the label text to a shorter, semantically equivalent term—this normalized the row heights and restored the intended responsive behaviour.
